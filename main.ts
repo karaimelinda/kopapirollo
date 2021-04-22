@@ -1,8 +1,12 @@
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     saját += 1
-    basic.showString("S:")
     basic.showString("" + (saját))
+    if (saját == 10) {
+        basic.showString("Nyertem")
+    } else if (barát == 10) {
+        basic.showString("Barat nyert")
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     fegyver = randint(0, 2)
@@ -17,7 +21,11 @@ input.onGesture(Gesture.Shake, function () {
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     barát += 1
-    basic.showString("B:")
+    if (saját == 10) {
+        basic.showString("Nyertem")
+    } else if (barát == 10) {
+        basic.showString("Barat nyert")
+    }
     basic.showString("" + (barát))
 })
 let fegyver = 0
