@@ -23,7 +23,7 @@ input.onButtonPressed(Button.B, function () {
     barát += 1
     basic.showString("" + (barát))
     if (barát == 10) {
-        basic.showString("Nyertem")
+        basic.showString("Barat nyert")
         saját = 0
         barát = 0
     }
