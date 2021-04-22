@@ -4,8 +4,12 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("" + (saját))
     if (saját == 10) {
         basic.showString("Nyertem")
+        saját = 0
+        barát = 0
     } else if (barát == 10) {
         basic.showString("Barat nyert")
+        saját = 0
+        barát = 0
     }
 })
 input.onGesture(Gesture.Shake, function () {
@@ -21,12 +25,16 @@ input.onGesture(Gesture.Shake, function () {
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     barát += 1
+    basic.showString("" + (barát))
     if (saját == 10) {
         basic.showString("Nyertem")
+        saját = 0
+        barát = 0
     } else if (barát == 10) {
         basic.showString("Barat nyert")
+        saját = 0
+        barát = 0
     }
-    basic.showString("" + (barát))
 })
 let fegyver = 0
 let barát = 0
