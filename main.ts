@@ -6,10 +6,6 @@ input.onButtonPressed(Button.A, function () {
         basic.showString("Nyertem")
         saját = 0
         barát = 0
-    } else if (barát == 10) {
-        basic.showString("Barat nyert")
-        saját = 0
-        barát = 0
     }
 })
 input.onGesture(Gesture.Shake, function () {
@@ -26,12 +22,8 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     barát += 1
     basic.showString("" + (barát))
-    if (saját == 10) {
+    if (barát == 10) {
         basic.showString("Nyertem")
-        saját = 0
-        barát = 0
-    } else if (barát == 10) {
-        basic.showString("Barat nyert")
         saját = 0
         barát = 0
     }
